@@ -8,7 +8,7 @@ import Input from '../Input';
 
 
 
-interface AddFoodProps {
+interface IAddFood {
   image: string;
   name: string;
   price: string;
@@ -18,13 +18,13 @@ interface AddFoodProps {
 interface ModalAddFoodProps {
   isOpen: boolean;
   setIsOpen: () => void;
-  handleAddFood: (data: AddFoodProps) => void;
+  handleAddFood: (data: IAddFood) => void;
 }
 
 export default function ModalAddFood({isOpen, setIsOpen, handleAddFood}: ModalAddFoodProps) {
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit = async (data: AddFoodProps) => {
+  const handleSubmit = async (data: IAddFood) => {
     handleAddFood(data);
     setIsOpen();
   }
