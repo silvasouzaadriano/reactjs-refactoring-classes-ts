@@ -6,8 +6,6 @@ import { Form } from './styles';
 import Modal from '../Modal';
 import Input from '../Input';
 
-
-
 interface IAddFood {
   image: string;
   name: string;
